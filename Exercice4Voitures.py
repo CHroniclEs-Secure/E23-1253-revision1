@@ -21,7 +21,17 @@ class Conducteur:
 
 
 ### création des voitures:
-vtr_1 = Voiture("Nissan", "Sentra", "2009")
-vtr_2 = Voiture("Toyota", "Prius", "2023")
-vtr_3 = Voiture("Tesla", "Model 3", "2017")
-vtr_4 = Voiture("Hyundai", "Santa Fe", "2020")
+voitures = [Voiture("Nissan", "Sentra", "2009"), Voiture("Toyota", "Prius", "2023"),
+            Voiture("Tesla", "Model 3", "2017"), Voiture("Hyundai", "Santa Fe", "2020")]
+
+conducteur = [] ###liste conducteur pour class Conducteur
+
+while True:
+    nom = input("Saisir le nom du propiétaire: ")
+    gender = input("Saisir le genre du conducteur: ") ###pour des mesures sécuritaires.
+    age = int(input("Saisir l'âge:"))
+    marque = input("Saisir la marque pour le trouver:")
+    for voiture in voitures:
+        if voiture.marque == marque:
+            conducteur = Conducteur(nom, gender, age)
+
