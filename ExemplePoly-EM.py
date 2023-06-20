@@ -38,14 +38,29 @@ class Etudiant(Personne):
 class Enseignant(Personne):
     def __init__(self, p_personne, p_ID, p_dpt, p_experience):
         super().__init__(p_personne.nom, p_personne.prenom, p_personne.age)
-        self.p_ID = p_ID
+        self.ID = p_ID
         self.dpt = p_dpt  #departement
-        self.experiemce = p_experience
+        self.experience = p_experience
 
     def presenteToi(self):
         print("Je m'appelle ", self.prenom, ". Je travaille dans le département: ", self.dpt, ".\n"
-              "Je suis dans le domain depuis: ", self.experiemce)
+              "Je suis dans le domain depuis: ", self.experience)
 
+### - class Employe (Rajout)
+class Employee(Personne,):
+    def __init__(self, p_personne, p_ID, p_dpt, p_Entreprise, p_benefices, p_assurance, p_AnnualSalaire):
+        super().__init__(p_personne.nom, p_personne.prenom, p_personne.age)
+        self.ID = p_ID
+        self.dpt = p_dpt
+        self.entreprise = p_Entreprise
+        self.benefice = p_benefices
+        self.assurance = p_assurance
+        self.annualsalaire = p_AnnualSalaire
+
+    def presenteToi(self):
+        print("Je m'appelle ", self.prenom, ". Je travaille dans le domain: ", self.dpt, ".\n"
+              "À l'entreprise: ", self.entreprise, ". Mes bénéfices sont: ", self.benefice, ".\n"
+              "Mes assurances sont: ", self.assurance, ". Mon Annual salire est: ", self.annualsalaire)
 
 """
   # constructeur V2 en utilisant un objet de type Personne (parent)
