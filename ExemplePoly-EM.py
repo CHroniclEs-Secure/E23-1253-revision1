@@ -24,18 +24,27 @@ class Personne:
 #class Etudiant hérite de Personne ::
 class Etudiant(Personne):
     # constructeur en utilisant un objet de type Personne (parent)
-    def __init__(self, p_personne, p_NumEtudiant, p_Groupe, p_AnneeGraduation):
+    def __init__(self, p_personne, p_ID, p_Grp, p_Graduation):
         super().__init__(p_personne.nom, p_personne.prenom, p_personne.age)
-        self.NumEtudiant = p_NumEtudiant
-        self.Groupe = p_Groupe
-        self.AnneeGraduation =p_AnneeGraduation
+        self.ID = p_ID
+        self.Grp = p_Grp   #Groupe
+        self.Graduation =p_Graduation
 
     def presenteToi(self):
-        print('Je suis ', self.prenom, 'et suis dans le gr : ', self.Groupe)
+        print('Je suis ', self.prenom, 'et suis dans le gr : ', self.Grp)
 
-Rajout(Erika-Marcela-Rivas)
+### - Rajout(Erika-Marcela-Rivas)
+### - class enseignant:
+class Enseignant(Personne):
+    def __init__(self, p_personne, p_ID, p_dpt, p_experience):
+        super().__init__(p_personne.nom, p_personne.prenom, p_personne.age)
+        self.p_ID = p_ID
+        self.dpt = p_dpt  #departement
+        self.experiemce = p_experience
 
-class
+    def presenteToi(self):
+        print("Je m'appelle ", self.prenom, ". Je travaille dans le département: ", self.dpt, ".\n"
+              "Je suis dans le domain depuis: ", self.experiemce)
 
 
 """
@@ -76,3 +85,4 @@ for x in liste:
 
 #Exercice Créer une liste de 4 Voiture
 # Trouver un moyen pour informer quelle personne conduit quelle voiture ???
+
