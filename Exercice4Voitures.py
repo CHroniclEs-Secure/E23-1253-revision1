@@ -14,3 +14,14 @@ class Conducteur:
         self.nom = nom
         self.gender = gender
         self.age = age
+        self.voiture = None
+
+    def conduire_voiture(self, voiture):
+        self.voiture = voiture
+
+
+### création des voitures:
+vtr_1 = Voiture("Nissan", "Sentra", "2009")
+vtr_2 = Voiture("Toyota", "Prius", "2023")
+vtr_3 = Voiture("Tesla", "Model 3", "2017")
+vtr_4 = Voiture("Hyundai", "Santa Fe", "2020")
